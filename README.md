@@ -3,9 +3,9 @@
 [![Documentation Status](http://readthedocs.org/projects/planificacionadministracionredes/badge/?version=latest)](http://planificacionadministracionredes.readthedocs.io/es/latest/?badge=latest)
 
 
-> 1º Administración de Sistemas Informáticos - Curso 2014-15
+> 1º Administración de Sistemas Informáticos - Curso 2020-2021
 >
-> IES Guadalpeña - Arcos de la Frontera (Spain)
+> IES Camino de la miranda - Palencia (Spain)
 
 Toda la documentación, teoría y actividades, es accesible en [este sitio web](http://planificacionadministracionredes.readthedocs.io).
 
