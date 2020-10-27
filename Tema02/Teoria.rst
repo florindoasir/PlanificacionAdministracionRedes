@@ -33,7 +33,7 @@ ITU (International Telecommunication Union)
 
 La organización ITU (UIT en castellano, Unión Internacional de Telecomunicaciones) es la organización más importante de las Naciones Unidas en lo que concierne a las tecnologías de la información. Esta organización representa un foco global para los gobiernos y el sector privado en el desarrollo de redes y servicios. ITU coordina el uso del espectro radioeléctrico, promoviendo la cooperación internacional para la asignación de órbitas de satélites, trabajando para mejorar las infraestructuras de comunicación mundiales, estableciendo estándares mundiales para la interconexión de un enorme rango de sistemas de comunicación, y haciendo frente a problemas actuales, como el cambio climático y la seguridad en el ciberespacio. Su sede está en Ginebra (Suiza) y está formada por 191 Estados miembros y más de 700 miembros del Sector y Asociados.
 
-Esta organización está compuesta por tres sectores o comités: 
+Esta organización está compuesta por tres sectores o comités:
 
 - **ITU-R** (anteriormente conocida como CCIR, Comité Consultivo Internacional de Radiocomunicaciones), que se encarga de promulgar estándares de comunicaciones que emplean el espectro electromagnético.
 
@@ -117,6 +117,9 @@ La arquitectura de una red viene definida por tres características fundamentale
 - **Método de acceso a la red**: todas las redes que poseen un medio compartido para transmitir la información, necesitan ponerse de acuerdo a la hora de enviar información, ya que no pueden hacerlo a la vez. En este caso, si dos estaciones transmiten a la vez en la misma frecuencia, la señal recogida en los receptores será una mezcla de las dos. Para las redes que no posean un medio compartido, el método de acceso al cable es trivial y no es necesario llevar a cabo ningún control para transmitir.
 - **Protocolos de comunicaciones**: son las **reglas y procedimientos utilizados en una red para realizar la comunicación**. Esas reglas tienen en cuenta el método utilizado para corregir errores, establecer una comunicación, etc.
 
+Problemas del diseño de la arquitectura de la red
+=================================================
+
 Aunque a primera vista parezca que el diseño de un sistema de comunicación parece simple, cuando se aborda resulta mucho más complejo, ya que es necesario resolver una serie de problemas. Algunos de los problemas más importantes a los que se enfrentan los diseñadores de redes de comunicaciones son:
 
 - **Encaminamiento**: cuando existen diferentes rutas posibles entre el origen y el destino (si la red tiene una topología de malla o irregular), se debe elegir una de ellas (normalmente, la más corta o la que tenga un tráfico menor).
@@ -127,9 +130,22 @@ Aunque a primera vista parezca que el diseño de un sistema de comunicación par
 - **Control de errores**: todas las redes de comunicación de datos transmiten la información con una pequeña tasa de error, que en ningún caso es nula. Esto se debe a que los medios de transmisión son imperfectos. Tanto emisor como receptor deben ponerse de acuerdo a la hora de establecer qué mecanismos se van a utilizar para detectar y corregir errores, y si se va a notificar al emisor que los mensajes llegan correctamente.
 - **Multiplexación**: en determinadas condiciones, la red puede tener tramos en los que existe un único medio de transmisión que, por cuestiones económicas, debe ser compartido por diferentes comunicaciones que no tienen relación entre sí. Así, el protocolo deberá asegurar que todas las comunicaciones que comparten el mismo medio no se interfieran entre sí.
 
-Los primeros ingenieros de comunicaciones se dieron cuenta de que el proceso de comunicación entre computadoras se podía dividir en capas, y de que abordar cada una de estas capas por separado facilitaba enormemente la tarea de diseño de protocolos y estándares para redes.
+Arquitecturas basadas en niveles
+=================================
+
+Los primeros ingenieros de comunicaciones se dieron cuenta de que el proceso de comunicación entre computadoras se podía dividir en capas, y de que abordar cada una de estas capas por separado facilitaba enormemente la tarea de diseño de protocolos y estándares para redes. (Divide y venderás)
 
 Al ocuparse cada una de las capas de ciertos aspectos concretos del proceso de comunicación, se libera de tales aspectos al resto de las capas, simplificando así el diseño de la red.
+
+Dentro de cada nivel de la arquitectura existen diferentes servicios Así los servicios de los niveles superiores pueden elegir cualquiera de los ofrecido por las capas inferiores, dependiendo de la función que se quiers realizar. A la unqntectiura por niveles también se le llama Jerarquia de protocolos. Si los fabricantes quieren desarrollar productos compatibles, deben ajustarse a los protocolos definidos para esa red. Por lo tanto, en una jerarquia de protocolos se siguen las sigaientes reglas
+
+- Cada nivel dispone de un conjunto de servicios
+
+- Los servicios están definidos mediante protocolos estándares
+
+- Cada nivel se comunica solamente con el nivel inmediato superior y con ci inmediato inferior.
+
+- Cada uno de los niveles inferiores proporciona servicios a su nivel superior.
 
 Modelo de referencia OSI y arquitectura TCP/IP
 ----------------------------------------------
@@ -139,7 +155,7 @@ Niveles y equivalencia
 
 .. image:: images/tema02-000.png
 
-.. note:: 
+.. note::
 
    En realidad la arquitectura TCP/IP es una arquitectura de 4 capas:
 
@@ -234,7 +250,7 @@ PDUs de TCP/IP
 En la arquitectura TCP/IP cada PDU recibe un nombre específico:
 
 - Capa de aplicación: **Datos**
-- Capa de transporte: **Segmentos** 
+- Capa de transporte: **Segmentos**
 - Capa de red: **Datagramas**
 - Capa de acceso a la red: **Tramas**
 - Capa física: Flujo de bits
@@ -402,7 +418,7 @@ Conmutación de paquetes
 
 Se trata del procedimiento mediante el cual, cuando un nodo quiere enviar un mensaje a otro, lo divide en paquetes. Cada paquete es enviado por el medio con información de cabecera. En cada nodo intermedio por el que pasa el paquete se detiene el tiempo necesario para procesarlo y decidir el siguiente nodo al cual enviarlo. Así sucesivamente hasta el destino. Los paquetes pueden perderse o llegar en distinto orden.
 
-Los distintos paquetes de un mismo mensaje pueden seguir caminos distintos hasta su destino. **Internet** es un ejemplo de conmutación de paquetes. 
+Los distintos paquetes de un mismo mensaje pueden seguir caminos distintos hasta su destino. **Internet** es un ejemplo de conmutación de paquetes.
 
 .. image:: images/tema02-021.png
 
