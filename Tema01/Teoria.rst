@@ -112,7 +112,7 @@ La **topología jerárquica** se desarrolla de forma similar a la topología en 
 
 La **topología en malla** se utiliza cuando no puede existir absolutamente ninguna interrupción en las comunicaciones, por ejemplo, en los sistemas de control de una central nuclear. De modo que, como puede observar en el gráfico, cada host tiene sus propias conexiones con los demás hosts. Esto también se refleja en el diseño de la Internet, que tiene múltiples rutas hacia cualquier ubicación.
 
-`local mirror <packet-tracer\0-ejemplos\topografias-red-packet-tracer.pdf>`_
+`Topologías en packet tracer </packet-tracer/0-ejemplos/topografias-red-packet-tracer.pdf>`_
 
 Topología lógica
 ++++++++++++++++
