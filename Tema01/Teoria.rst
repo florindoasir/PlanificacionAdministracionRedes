@@ -84,7 +84,7 @@ Su extensión abarca a varios edificios de la misma ciudad. Por ejemplo, una red
 WAN (Wide Area Network, Red de Área Amplia)
 +++++++++++++++++++++++++++++++++++++++++++
 
-Su extensión abarca localidades, provincias e incluso países distintos, usando normalmente medios públicos. El 
+Su extensión abarca localidades, provincias e incluso países distintos, usando normalmente medios públicos. El
 ejemplo más importante es la red Internet, que utiliza, entre otras, la red telefónica mundial.
 
 Según su topología
@@ -111,6 +111,8 @@ La **topología en estrella extendida** se desarrolla a partir de la topología 
 La **topología jerárquica** se desarrolla de forma similar a la topología en estrella extendida pero, en lugar de conectar los hubs/switches entre sí, el sistema se conecta con un computador que controla el tráfico de la topología.
 
 La **topología en malla** se utiliza cuando no puede existir absolutamente ninguna interrupción en las comunicaciones, por ejemplo, en los sistemas de control de una central nuclear. De modo que, como puede observar en el gráfico, cada host tiene sus propias conexiones con los demás hosts. Esto también se refleja en el diseño de la Internet, que tiene múltiples rutas hacia cualquier ubicación.
+
+Topologías en packet tracer :ref:`packet-tracer\0-ejemplos\topografias-red-packet-tracer.pdf`.
 
 Topología lógica
 ++++++++++++++++
