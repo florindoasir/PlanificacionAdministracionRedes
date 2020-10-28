@@ -117,19 +117,6 @@ La arquitectura de una red viene definida por tres características fundamentale
 - **Método de acceso a la red**: todas las redes que poseen un medio compartido para transmitir la información, necesitan ponerse de acuerdo a la hora de enviar información, ya que no pueden hacerlo a la vez. En este caso, si dos estaciones transmiten a la vez en la misma frecuencia, la señal recogida en los receptores será una mezcla de las dos. Para las redes que no posean un medio compartido, el método de acceso al cable es trivial y no es necesario llevar a cabo ningún control para transmitir.
 - **Protocolos de comunicaciones**: son las **reglas y procedimientos utilizados en una red para realizar la comunicación**. Esas reglas tienen en cuenta el método utilizado para corregir errores, establecer una comunicación, etc.
 
-Problemas del diseño de la arquitectura de la red
-=================================================
-
-Aunque a primera vista parezca que el diseño de un sistema de comunicación parece simple, cuando se aborda resulta mucho más complejo, ya que es necesario resolver una serie de problemas. Algunos de los problemas más importantes a los que se enfrentan los diseñadores de redes de comunicaciones son:
-
-- **Encaminamiento**: cuando existen diferentes rutas posibles entre el origen y el destino (si la red tiene una topología de malla o irregular), se debe elegir una de ellas (normalmente, la más corta o la que tenga un tráfico menor).
-- **Direccionamiento**: puesto que una red normalmente tiene muchos ordenadores conectados, se requiere un mecanismo para que un proceso (programa en ejecución) en una máquina especifique con quién quiere comunicarse. Como consecuencia de tener varios destinos, se necesita alguna forma de direccionamiento que permita determinar un destino específico.
-- **Acceso al medio**: en las redes donde existe un medio de comunicación de difusión, debe existir algún mecanismo que controle el orden de transmisión de los interlocutores. De no ser así, todas las transmisiones se interfieren y no es posible llevar a cabo una comunicación en óptimas condiciones. El control de acceso al medio en una red es muy similar a una comunicación mediante walkie-talkie, donde los dos interlocutores deben evitar hablar a la vez o se producirá una colisión. Esta situación es indeseable en las redes que usan un medio compartido, ya que los mensajes se mezclan y resulta imposible interpretarlos.
-- **Saturación del receptor**: esta cuestión suele plantearse en todos los niveles de la arquitectura y consiste en que un emisor rápido pueda saturar a un receptor lento. En determinadas condiciones, el proceso en el otro extremo necesita un tiempo para procesar la información que le llega. Si ese tiempo es demasiado grande en comparación con la velocidad con la que le llega la información, será posible que se pierdan datos. Una posible solución a este problema consiste en que el receptor envíe un mensaje al emisor indicándole que está listo para recibir más datos.
-- **Mantenimiento del orden**: algunas redes de transmisión de datos desordenan los mensajes que envían, de forma que, si los mensajes se envían en una secuencia determinada, no se asegura que lleguen en esa misma secuencia. Para solucionar esto, el protocolo debe incorporar un mecanismo que le permita volver a ordenar los mensajes en el destino. Este mecanismo puede ser la numeración de los fragmentos, por ejemplo.
-- **Control de errores**: todas las redes de comunicación de datos transmiten la información con una pequeña tasa de error, que en ningún caso es nula. Esto se debe a que los medios de transmisión son imperfectos. Tanto emisor como receptor deben ponerse de acuerdo a la hora de establecer qué mecanismos se van a utilizar para detectar y corregir errores, y si se va a notificar al emisor que los mensajes llegan correctamente.
-- **Multiplexación**: en determinadas condiciones, la red puede tener tramos en los que existe un único medio de transmisión que, por cuestiones económicas, debe ser compartido por diferentes comunicaciones que no tienen relación entre sí. Así, el protocolo deberá asegurar que todas las comunicaciones que comparten el mismo medio no se interfieran entre sí.
-
 Arquitecturas basadas en niveles
 =================================
 
@@ -146,6 +133,21 @@ Dentro de cada nivel de la arquitectura existen diferentes servicios Así los se
 - Cada nivel se comunica solamente con el nivel inmediato superior y con ci inmediato inferior.
 
 - Cada uno de los niveles inferiores proporciona servicios a su nivel superior.
+
+**EJEMPLO ANTENAS LIBRO RA-MA**
+
+Problemas del diseño de la arquitectura de la red
+=================================================
+
+Aunque a primera vista parezca que el diseño de un sistema de comunicación parece simple, cuando se aborda resulta mucho más complejo, ya que es necesario resolver una serie de problemas. Algunos de los problemas más importantes a los que se enfrentan los diseñadores de redes de comunicaciones son:
+
+- **Encaminamiento**: cuando existen diferentes rutas posibles entre el origen y el destino (si la red tiene una topología de malla o irregular), se debe elegir una de ellas (normalmente, la más corta o la que tenga un tráfico menor).
+- **Direccionamiento**: puesto que una red normalmente tiene muchos ordenadores conectados, se requiere un mecanismo para que un proceso (programa en ejecución) en una máquina especifique con quién quiere comunicarse. Como consecuencia de tener varios destinos, se necesita alguna forma de direccionamiento que permita determinar un destino específico.
+- **Acceso al medio**: en las redes donde existe un medio de comunicación de difusión, debe existir algún mecanismo que controle el orden de transmisión de los interlocutores. De no ser así, todas las transmisiones se interfieren y no es posible llevar a cabo una comunicación en óptimas condiciones. El control de acceso al medio en una red es muy similar a una comunicación mediante walkie-talkie, donde los dos interlocutores deben evitar hablar a la vez o se producirá una colisión. Esta situación es indeseable en las redes que usan un medio compartido, ya que los mensajes se mezclan y resulta imposible interpretarlos.
+- **Saturación del receptor**: esta cuestión suele plantearse en todos los niveles de la arquitectura y consiste en que un emisor rápido pueda saturar a un receptor lento. En determinadas condiciones, el proceso en el otro extremo necesita un tiempo para procesar la información que le llega. Si ese tiempo es demasiado grande en comparación con la velocidad con la que le llega la información, será posible que se pierdan datos. Una posible solución a este problema consiste en que el receptor envíe un mensaje al emisor indicándole que está listo para recibir más datos.
+- **Mantenimiento del orden**: algunas redes de transmisión de datos desordenan los mensajes que envían, de forma que, si los mensajes se envían en una secuencia determinada, no se asegura que lleguen en esa misma secuencia. Para solucionar esto, el protocolo debe incorporar un mecanismo que le permita volver a ordenar los mensajes en el destino. Este mecanismo puede ser la numeración de los fragmentos, por ejemplo.
+- **Control de errores**: todas las redes de comunicación de datos transmiten la información con una pequeña tasa de error, que en ningún caso es nula. Esto se debe a que los medios de transmisión son imperfectos. Tanto emisor como receptor deben ponerse de acuerdo a la hora de establecer qué mecanismos se van a utilizar para detectar y corregir errores, y si se va a notificar al emisor que los mensajes llegan correctamente.
+- **Multiplexación**: en determinadas condiciones, la red puede tener tramos en los que existe un único medio de transmisión que, por cuestiones económicas, debe ser compartido por diferentes comunicaciones que no tienen relación entre sí. Así, el protocolo deberá asegurar que todas las comunicaciones que comparten el mismo medio no se interfieran entre sí.
 
 Modelo de referencia OSI y arquitectura TCP/IP
 ----------------------------------------------
