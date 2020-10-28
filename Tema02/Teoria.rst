@@ -174,6 +174,18 @@ También durante la década de los setenta, **DARPA** evolucionó su red ARPANET
 
 El modelo OSI, sin embargo, continúa siendo de gran importancia, ya que nos permite describir y comprender fácilmente la base conceptual del resto de arquitecturas de red.
 
+¿Cómo llegó la ISO a definir esta arquitectura de siete niveles partiendo desde cerio?¿Cuáles fueron sus principios teóricos?
+
+- Cada capa de la arquitectura está pensada para realizar una función bien definida.
+- El numero de niveles debe ser suficiente para que no se agrupen funciones distintas, pero no tan grande que haga la arquitectura inmanejable.
+- Debe crearse una nueva capa siempre que se necesite realizar una función bien diferenciada del resto.
+- Las divisiones en las capas deben establecerse de forma que se minimice el flujo de información entre ellas, es decir, que la interfaz sea más sencilla.
+- Permitir que las modificaciones de funciones o protocolos que se realicen en una capa no afecten a los niveles contiguos.
+- Utilizar la experiencia de protocolos anteriores. Las fronteras entre niveles deben situarse donde la experiencia ha demostrado que son convenientes.
+- Cada nivel debe interaccionar únicamente con los niveles contiguos a él (es decir, el superior y el inferior), La función de cada capa se debe elegir pensando en la definición de protocolos estandarizados internacionalmente. 
+
+OSI está definido más bien como modelo, y no como arquitectura, La razón principal es que la IS0 definió solamente la función general que debe realizar cada capa, pero no mencionó en absoluto los servicios y protocolos que se deben usar en cada una de ellas. Esto quiere decir que, al contrario que el resto de arquitecturas de redes, el modelo OSI se definió antes de que se diseñaran los protocolos. Recuérdese la definición de arquitectura que aparece en el apartado anterior
+
 Niveles OSI
 ------------
 
