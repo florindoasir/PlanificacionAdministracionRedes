@@ -248,18 +248,11 @@ En el año 1973, el DoD (Departamento de Defensa de Estados Unidos) inició un p
 
 Todos estos objetivos implicaron el diseño de una red con topologia irregular donde la información se fragmentaba para seguir rutas diferentes hacia el destinatario. Si alguna de esas rutas fallaba repentinamente, la información podía seguir rutas alternativas. Asi, surgieron dos redes distintas una dedicada a la investigación. ARPANET. y otra de uso exclusivamente militar, MILNET.
 
-.. image:: images/tema02-000.png
+.. image:: images/tema02-033.png
 
 .. note::
 
-   En realidad la arquitectura TCP/IP es una arquitectura de 4 capas:
-
-   - 4. Aplicación (capas 5,6 y 7 de OSI)
-   - 3. Transporte (capa 4 de OSI)
-   - 2. Internet (capa 3 de OSI)
-   - 1. Acceso a la red (capas 1 y 2 de OSI)
-
-   En estos apuntes usaremos la distribución de capas indicadas en la figura anterior por motivos didácticos al ser la numeración de niveles muy parecida al modelo OSI.
+   Ésta es la arquitectura real de la arquitectura TCP/IP
 
 Sabiendo que TCP/IP sólo tiene cuatro capas pasamos a definirlas
 
