@@ -312,7 +312,7 @@ En la arquitectura TCP/IP cada PDU recibe un nombre específico:
 
 - Capa de aplicación: **Datos**
 - Capa de transporte: **Segmentos**
-- Capa de red: **Datagramas**
+- Capa de red: **Paquetes**
 - Capa de acceso a la red: **Tramas**
 - Capa física: Flujo de bits
 
