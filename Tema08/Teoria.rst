@@ -16,7 +16,7 @@ El nivel más bajo es la **capa física**. Aquí nos referimos al medio físico 
 
 La **capa de acceso a la red** determina la manera en que las estaciones (ordenadores) envían y reciben la información a través del soporte físico proporcionado por la capa anterior. Es decir, una vez que tenemos un cable, ¿cómo se transmite la información por ese cable? ¿Cuándo puede una estación transmitir? ¿Tiene que esperar algún turno o transmite sin más? ¿Cómo sabe una estación que un mensaje es para ella? Pues bien, son todas estas cuestiones las que resuelve esta capa.
 
-Las dos capas anteriores quedan a un nivel inferior del protocolo TCP/IP, es decir, no forman parte de este protocolo. 
+Las dos capas anteriores quedan a un nivel inferior del protocolo TCP/IP, es decir, no forman parte de este protocolo.
 
 La **capa de red** define la forma en que un mensaje se transmite a través de distintos tipos de redes hasta llegar a su destino. El principal protocolo de esta capa es el IP aunque también se encuentran a este nivel los protocolos ARP, ICMP e IGMP. Esta capa proporciona el direccionamiento IP y determina la ruta óptima a través de los encaminadores (routers) que debe seguir un paquete desde el origen al destino.
 
@@ -39,7 +39,7 @@ El concepto de red está relacionado con las **direcciones IP** que se configure
 
 La capa de red se encarga de fragmentar cada mensaje en paquetes de datos llamados **datagramas IP** y de enviarlos de forma independiente a través de la red de redes. Cada datagrama IP incluye un campo con la dirección IP de destino. Esta información se utiliza para enrutar los datagramas a través de las redes necesarias que los hagan llegar hasta su destino.
 
-.. note:: 
+.. note::
 
    Cada vez que visitamos una página web o recibimos un correo electrónico es habitual atravesar un número de redes comprendido entre 10 y 20, dependiendo de la distancia de los hosts. El tiempo que tarda un datagrama en atravesar 20 redes (20 routers) suele ser inferior a 600 milisegundos.
 
@@ -133,7 +133,7 @@ Existen un total de 3\ :sup:`32` direcciones IP (4.294.967.296).
 .. figure:: images/tema08-007.png
 
    Tamaño relativo de cada clase.
-   
+
    Clase C: (**256 IPs**).Arriba
    Clase B: (**65.536 IPs**). En medio
    Clase A: (**16.777.216 IPs**). Abajo
@@ -142,7 +142,7 @@ Existen un total de 3\ :sup:`32` direcciones IP (4.294.967.296).
 Clases
 +++++++
 
-¿Cuántas direcciones IP existen? Si calculamos 2 elevado a 32 obtenemos más de 4000 millones de direcciones distintas. Sin embargo, no todas las direcciones son válidas para asignarlas a hosts. Las direcciones IP no se encuentran aisladas en Internet, sino que pertenecen siempre a alguna red. Todas las máquinas conectadas a una misma red se caracterizan en que los primeros bits de sus direcciones son iguales. De esta forma, las direcciones se dividen conceptualmente en dos partes: 
+¿Cuántas direcciones IP existen? Si calculamos 2 elevado a 32 obtenemos más de 4000 millones de direcciones distintas. Sin embargo, no todas las direcciones son válidas para asignarlas a hosts. Las direcciones IP no se encuentran aisladas en Internet, sino que pertenecen siempre a alguna red. Todas las máquinas conectadas a una misma red se caracterizan en que los primeros bits de sus direcciones son iguales. De esta forma, las direcciones se dividen conceptualmente en dos partes:
 
 - el identificador de red
 - el identificador de host.
@@ -165,7 +165,7 @@ E      no válidas              -            -                    240.0.0.0 - 25
 ====== ======================= ============ ==================== ============================== ==================
 
 .. note::
- 
+
    Las direcciones usadas en Internet están definidas en la RFC 1166
 
 .. note::
@@ -253,7 +253,7 @@ C       255.255.255.0
 
 Si expresamos la máscara de subred de clase A en notación binaria, tenemos:
 
-11111111.00000000.00000000.00000000 
+11111111.00000000.00000000.00000000
 
 Los unos indican los bits de la dirección correspondientes a la red y los ceros, los correspondientes al host. Según la máscara anterior, el primer byte (8 bits) es la red y los tres siguientes (24 bits), el host. Por ejemplo, la dirección de clase A 35.120.73.5 pertenece a la red 35.0.0.0.
 
@@ -263,7 +263,7 @@ Supongamos una subred con máscara 255.255.0.0, en la que tenemos un ordenador c
 
 	148.120.33.110     10010100.01111000.00100001.01101110 (dirección de una máquina)
 	255.255.0.0        11111111.11111111.00000000.00000000 (dirección de su máscara de red)
-	148.120.0.0        10010100.01111000.00000000.00000000 (dirección de su subred) 
+	148.120.0.0        10010100.01111000.00000000.00000000 (dirección de su subred)
 	                   <-------RED-----> <-----HOST------>
 
 Al hacer el producto binario de las dos primeras direcciones (donde hay dos 1 en las mismas posiciones ponemos un 1 y en caso contrario, un 0) obtenemos la tercera.
@@ -276,7 +276,7 @@ Si hacemos lo mismo con otro ordenador, por ejemplo el 148.120.33.89, obtenemos 
 
 	148.120.33.89    10010100.01111000.00100001.01011001 (dirección de una máquina)
 	255.255.0.0      11111111.11111111.00000000.00000000 (dirección de su máscara de red)
-	148.120.0.0      10010100.01111000.00000000.00000000 (dirección de su subred) 
+	148.120.0.0      10010100.01111000.00000000.00000000 (dirección de su subred)
 
 
 En cambio, si tomamos la 148.115.89.3, observamos que no pertenece a la misma subred que las anteriores.
@@ -286,7 +286,7 @@ En cambio, si tomamos la 148.115.89.3, observamos que no pertenece a la misma su
 
 	148.115.89.3    10010100.01110011.01011001.00000011 (dirección de una máquina)
 	255.255.0.0     11111111.11111111.00000000.00000000 (dirección de su máscara de red)
-	148.115.0.0     10010100.01110011.00000000.00000000 (dirección de su subred) 
+	148.115.0.0     10010100.01110011.00000000.00000000 (dirección de su subred)
 
 
 **Cálculo de la dirección de difusión**.-- Ya hemos visto que el producto lógico binario (AND) de una IP y su máscara devuelve su dirección de red. Para calcular su dirección de difusión, hay que hacer la suma lógica en binario (OR) de la IP con el inverso (NOT) de su máscara.
@@ -406,7 +406,7 @@ Podemos ver los parámetros de la red con los siguientes comandos:
 
 .. code-block:: console
 
-   ipconfig /all            # (IP/Máscara, Puerta de enlace, DNS)    
+   ipconfig /all            # (IP/Máscara, Puerta de enlace, DNS)
 
 .. image:: images/tema08-linux-logo.png
    :align: left
@@ -415,7 +415,7 @@ Podemos ver los parámetros de la red con los siguientes comandos:
 
    ifconfig                 # (IP/Máscara)
    route                    # (Puerta de enlace)
-   cat /etc/resolv.conf     # (DNS)    
+   cat /etc/resolv.conf     # (DNS)
 
 
 **Configuración dinámica de IP/Máscara, Puerta de Enlace y servidores DNS**
@@ -425,7 +425,7 @@ Podemos ver los parámetros de la red con los siguientes comandos:
 
 .. code-block:: console
 
-   ipconfig /release        # (Liberamos)           
+   ipconfig /release        # (Liberamos)
    ipconfig /renew          # (Renovamos)
 
 .. image:: images/tema08-linux-logo.png
@@ -434,7 +434,7 @@ Podemos ver los parámetros de la red con los siguientes comandos:
 .. code-block:: console
 
    dhclient -r eth0         # (Liberamos)
-   dhclient eth0            # (Renovamos)   
+   dhclient eth0            # (Renovamos)
 
 **Configuración estática de IP/Máscara, Puerta de Enlace y servidores DNS**
 
@@ -447,14 +447,14 @@ Podemos ver los parámetros de la red con los siguientes comandos:
    interface
    ip
 
-   set address “Conexión de área local” static   \     
+   set address “Conexión de área local” static   \
            192.168.1.30                          \
            255.255.255.0                         \
-           192.168.1.1                           \ 
-           1                                      
+           192.168.1.1                           \
+           1
 
    set dns “Conexión de área local” static       \
-           8.8.8.8                            
+           8.8.8.8
 
    commit
    exit
@@ -465,7 +465,7 @@ Podemos ver los parámetros de la red con los siguientes comandos:
 
 .. code-block:: console
 
-   ifconfig  eth0  192.168.1.30  netmask  255.255.255.0 
+   ifconfig  eth0  192.168.1.30  netmask  255.255.255.0
    route  add  default  gw  192.168.1.1
    echo  "nameserver  8.8.8.8"  >>  /etc/resolv.conf
 
@@ -478,7 +478,7 @@ Una vez configurado el soporte de red procederemos a comprobar su correcto funci
 
 1. Comprobamos la pila TCP/IP del Sistema Operativo
 
-        ``ping 127.0.0.1``  
+        ``ping 127.0.0.1``
 
 2. Comprobamos la tarjeta de red
 
@@ -486,12 +486,12 @@ Una vez configurado el soporte de red procederemos a comprobar su correcto funci
 
 3. Comprobamos las tablas de rutas
 
-        ``route print``        (Windows) 
-        ``route``              (Linux) 
+        ``route print``        (Windows)
+        ``route``              (Linux)
 
 4. Comprobamos el cable
 
-        ``ping 192.168.1.1`` 
+        ``ping 192.168.1.1``
 
 5. Comprobamos la salida a Internet
 
@@ -499,7 +499,7 @@ Una vez configurado el soporte de red procederemos a comprobar su correcto funci
 
 6. Comprobamos la resolución de nombres
 
-        ``ping www.google.es`` 
+        ``ping www.google.es``
 
 Utilidades de red (Windows y Linux)
 +++++++++++++++++++++++++++++++++++
@@ -535,7 +535,7 @@ IP es el principal protocolo de la capa de red. Este protocolo define la unidad 
 - Es **no fiable** porque los paquetes pueden perderse, dañarse o llegar retrasados.
 
 .. note::
-  
+
    El protocolo IP está definido en la RFC 791
 
 Formato del datagrama IP
@@ -558,7 +558,7 @@ El datagrama IP es la unidad básica de transferencia de datos entre el origen y
 - **Tipo de servicio (Type Of Service)**. Los 8 bits de este campo se dividen a su vez en:
 
   - **Prioridad (3 bits)**. Un valor de 0 indica baja prioridad y un valor de 7, prioridad máxima.
-    
+
   - Los siguientes tres bits indican cómo se prefiere que se transmita el mensaje, es decir, son sugerencias a los encaminadores que se encuentren a su paso los cuales pueden tenerlas en cuenta o no.
 
     - **Bit D** (Delay). Solicita retardos cortos (enviar rápido).
@@ -645,7 +645,7 @@ CIDR    Clase                     Hosts [1]_       Máscara
 /27     1/8 C                     32               255.255.255.224
 /26     1/4 C                     64               255.255.255.192
 /25     1/2 C                     128              255.255.255.128
-/24     1 C                       256              255.255.255.000 
+/24     1 C                       256              255.255.255.000
 /23     2 C                       512              255.255.254.000
 /22     4 C                       1024             255.255.252.000
 /21     8 C                       2048             255.255.248.000
@@ -695,7 +695,7 @@ Ejemplo de agrupamiento:
 	193.40.129.0 = 11000001 00101000 1000 0001 00000000
 	.
 	.
-	.                                   
+	.
 	193.40.142.0 = 11000001 00101000 1000 1110 00000000
 	193.40.143.0 = 11000001 00101000 1000 1111 00000000
 
@@ -703,7 +703,7 @@ La dirección de red/máscara sería 193.40.128.0/20 ( 255.255.240.0)
 
 .. code-block:: none
 
-	Máscara en binario: 11111111  11111111  11110000  00000000.     
+	Máscara en binario: 11111111  11111111  11110000  00000000.
 
 Existen 2\ :sup:`12`-2 (4096-2) direcciones IP para hosts
 
@@ -718,7 +718,7 @@ Dentro de una misma red, las máquinas se comunican enviándose tramas físicas.
 Preámbulo	Dirección físicadestino	Dirección físicaorigen	Tipo de trama	Datos de la trama	CRC
 El problema que se nos plantea es cómo podemos conocer la dirección física de la máquina destino. El único dato que se indica en los datagramas es la dirección IP de destino. ¿Cómo se pueden entregar entonces estos datagramas? Necesitamos obtener la dirección física de un ordenador a partir de su dirección IP. Esta es justamente la misión del protocolo ARP (Address Resolution Protocol, protocolo de resolución de direcciones).
 
-.. note:: 
+.. note::
 
    ARP se utiliza en **redes con mecanismos de difusión** (Ethernet, FDDI, Token-Ring, etc.)
    El protocolo ARP está definido en RFC 826, RFC 1042 y RFC 1390
@@ -810,7 +810,7 @@ Si el host de destino no existiese o no estuviera correctamente configurado reci
 
 	C:\>ping 192.168.0.6 -n 1
 	Haciendo ping a 192.168.0.6 con 32 bytes de datos:
-	Tiempo de espera agotado. 
+	Tiempo de espera agotado.
 
 Si tratamos de acceder a un host de una red distinta a la nuestra y no existe un camino para llegar hasta él, es decir, los routers no están correctamente configurados o estamos intentando acceder a una red aislada o inexistente, recibiríamos un mensaje ICMP de tipo 3 (Destination Unreachable).
 
@@ -818,7 +818,7 @@ Si tratamos de acceder a un host de una red distinta a la nuestra y no existe un
 
 	C:\>ping 1.1.1.1 -n 1
 	Haciendo ping a 1.1.1.1 con 32 bytes de datos:
-	Respuesta desde 192.168.0.1: Host de destino inaccesible. 
+	Respuesta desde 192.168.0.1: Host de destino inaccesible.
 
 Utilización de PING para diagnosticar errores en una red aislada
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -857,7 +857,7 @@ A continuación veremos un ejemplo para una red de redes formada por dos redes (
 En el caso producirse errores de comunicación en una red de redes con más de un router (Internet es el mejor ejemplo), se suele utilizar el comando PING para ir diagnosticando los distintos routers desde el destino hasta el origen y descubrir así si el fallo es responsabilidad de la red de destino, de una red intermedia o de nuestra red.
 
 .. note::
-   
+
    Algunos hosts en Internet tienen deshabilitadas las respuestas de eco (mensajes ICMP tipo 0) como medida de seguridad. En estos casos hay que utilizar otros mecanismos para detectar si responde (por ejemplo, la apertura de conexión a un puerto)
 
 Mensajes ICMP de tiempo excedido
@@ -889,7 +889,7 @@ La orden **TRACERT** (**traceroute** en entornos Unix) hace una traza a un deter
 	11 137 ms 119 ms 122 ms A0-0-0-1.EB-Madrid3.red.rediris.es [130.206.224.86]
 	12 109 ms 135 ms 115 ms sun.rediris.es [130.206.1.2]
 
-	Traza completa. 
+	Traza completa.
 
 Ejemplo de Visual Route a una dirección IP de Taiwan (203.69.112.12):
 
@@ -932,7 +932,7 @@ es una dirección IPv6 válida.
 
 Si un grupo de cuatro dígitos es nulo (es decir, toma el valor "0000"), puede ser comprimido. Por ejemplo,
 
-``2001:0db8:85a3:0000:1319:8a2e:0370:7344``  
+``2001:0db8:85a3:0000:1319:8a2e:0370:7344``
 
 es la misma dirección que
 
@@ -942,7 +942,7 @@ Siguiendo esta regla, si más de dos grupos consecutivos son nulos, pueden compr
 
 - ``2001:0DB8:0000:0000:0000:0000:1428:57ab``
 - ``2001:0DB8:0000:0000:0000::1428:57ab``
-- ``2001:0DB8:0:0:0:0:1428:57ab``   
+- ``2001:0DB8:0:0:0:0:1428:57ab``
 - ``2001:0DB8:0::0:1428:57ab``
 - ``2001:0DB8::1428:57ab``
 
@@ -958,20 +958,20 @@ Los ceros iniciales en un grupo pueden ser omitidos. Así,
 
 es lo mismo que
 
-``2001:DB8:2de::e13`` 
+``2001:DB8:2de::e13``
 
 Si la dirección es una dirección IPv4 camuflada, los últimos 32 bits pueden escribirse en base decimal; así,
 
 ``::ffff:192.168.89.9``
 
-es lo mismo que  
+es lo mismo que
 
 ``::ffff:c0a8:5909``
 
-pero no lo mismo que 
+pero no lo mismo que
 
-- ``::192.168.89.9`` 
-- ``::c0a8:5909`` 
+- ``::192.168.89.9``
+- ``::c0a8:5909``
 
 El formato ``::ffff:1.2.3.4`` se denomina dirección **IPv4 mapeada**, y el formato ``::1.2.3.4`` dirección **IPv4 compatible**.
 
