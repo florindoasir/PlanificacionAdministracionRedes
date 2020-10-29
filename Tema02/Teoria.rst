@@ -326,6 +326,10 @@ El resultado de todo esto es que los datos originales cada vez poseen más cabec
 
 En el equipo destino se irán quitando las cabeceras en orden inverso a como se añadieron. Cada capa leerá la cabecera que contiene los datos de control destinados a ella.
 
+Ejemplo navegar por internet TCP/IP
++++++++++++++++++++++++++++++++++++
+.. image:: images/web-tcpip.PNG
+
 Componentes de una red
 =======================
 
