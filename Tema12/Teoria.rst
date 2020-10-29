@@ -1,5 +1,8 @@
+12. CONEXIÓN A REDES DE ÁREA EXTENSA
+====================================
+
 Introducción
-=============
+------------
 
 Los métodos de acceso a Internet más frecuentes son:
 
@@ -186,8 +189,8 @@ B      Servicios básicos        64 Kbps.
 D      Señalización	            16 Kbps. (BRI)
 -      -                        64 Kbps. (PRI)
 H0	   6 canales B              384 Kbps. (PRI)
-H1     todos los canales H0     - 
--      H11 (24B)                1.536 Kbps.(PRI) 
+H1     todos los canales H0     -
+-      H11 (24B)                1.536 Kbps.(PRI)
 -      H12 (30B)                1.920 Kbps. (PRI)
 H2     RDSI de banda ancha      (propuesta actual)
 -      H21                      32.768 Kbps.
@@ -203,7 +206,7 @@ Interfaz    Estructura  Velocidad total	Velocidad disponible
 =========== =========== =============== ===========================
 BRI         2B + D16    192 Kbps.       144 Kbps.
 PRI         23B + D64   1.544 Kbps.     1.536 Kbps. (EE.UU.)
-PRI         30B + D64	2.048 Kbps.     1.984 Kbps. (Europa) 
+PRI         30B + D64	2.048 Kbps.     1.984 Kbps. (Europa)
 =========== =========== =============== ===========================
 
 Tipos de contratación
@@ -238,16 +241,16 @@ Nombre  Significado                 Velocidad                       Modo        
 ======= =========================== =============================== ========================== ==================================
 ADSL    DSL asimétrico              - Hasta 12 Mbps                 - Descendente              Utiliza un par de hilos. Hasta 5,5 km de distancia.
                                     - Hasta 1.8 Mbps                - Ascendente
-                        
+
 RADSL   DSL de velocidad adaptable  - De 1,5 a 8 Mbps               - Descendente              Utiliza un par de hilos. Adapta su velocidad de datos a la velocidad de la línea
                                     - De 16 a 640 kbps              - Ascendente
 
 CDSL    DSL de consumidor           - Hasta 1 Mbps                  - Descendente              Utiliza un par de hilos. No necesita splitter en casa.
-                                    - De 16 a 128 kbps              - Ascendente               
+                                    - De 16 a 128 kbps              - Ascendente
 
-SDSL    DSL de par único            - 768 kbps                      - Simétrico                Utiliza un par de hilos.  
+SDSL    DSL de par único            - 768 kbps                      - Simétrico                Utiliza un par de hilos.
 
-IDSL    DSL de RDSI                 - Igual a BRI de RDSI           - Simétrico                Utiliza un par de hilos que se denomina Bri sin conmutador.            
+IDSL    DSL de RDSI                 - Igual a BRI de RDSI           - Simétrico                Utiliza un par de hilos que se denomina Bri sin conmutador.
 
 HDSL    DSL de alta velocidad       - 1,544 Mbps (EE.UU)            - Simétrico                Utiliza 2 o 3 pares de hilos.
                                     - 2,048 Mbps (Europa)           - Simétrico

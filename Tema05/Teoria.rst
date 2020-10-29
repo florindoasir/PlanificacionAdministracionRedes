@@ -1,5 +1,8 @@
+5. SEGURIDAD Y PROTECCIÓN MEDIOAMBIENTAL
+========================================
+
 Seguridad y salud laboral
-=========================
+-------------------------
 
 La **seguridad y salud laboral** (denominada anteriormente como "seguridad e higiene en el trabajo") tiene por objeto la aplicación de medidas y el desarrollo de las actividades necesarias para la prevención de riesgos derivados del trabajo.
 
@@ -160,7 +163,7 @@ Normas básicas de seguridad y salud
 Las normas básicas de seguridad y salud en los centros de trabajo condicionan de forma significativa las condiciones generales de trabajo y son un conjunto de medidas destinadas a proteger la salud de los trabajadores, prevenir accidentes laborales y promover el cuidado de la maquinaria, herramientas y materiales con los que se trabaja. Las normas se concretan en un conjunto de prácticas de sentido común donde **el elemento clave es la actitud responsable y la concienciación de todas las personas a las que afecta**.
 
 La eficacia de la norma se concreta en el siguiente principio:
- 
+
     **Respételas y hágalas respetar**.
 
 El cumplimiento de estos aspectos aumentará el sentido de seguridad y salud de los trabajadores y disminuirán los riesgos profesionales de accidentes y enfermedades en el trabajo. Las empresas deben llevar un registro en un libro adecuado y visado de todos los siniestros laborales que se producen indicando la fecha, hora, partes y personas afectadas y tipo de **gravedad del accidente: leve, grave, o mortal**. Con el registro de los accidentes de trabajo se establecen las **estadísticas de siniestralidad laboral** a nivel de empresa y de otros ámbitos superiores territorialmente o sectorialmente. De acuerdo con las estadísticas de siniestralidad se establecen los planes, campañas o proyectos de prevención de accidentes laborales.
@@ -227,7 +230,7 @@ Contaminantes biológicos
 
 .. figure:: images/tema05-002.png
    :align: right
-   
+
    Símbolo de riesgo biológico
 
 El concepto de agente biológico incluye, pero no está limitado, a bacterias, hongos, virus, protozoos, rickettsias, clamidias, endoparásitos humanos, productos de recombinación, cultivos celulares humanos o de animales y los agentes biológicos potencialmente infecciosos que estas células puedan contener, priones y otros agentes infecciosos.
@@ -432,7 +435,7 @@ Las aberturas o desniveles que supongan un riesgo de caída de personas se prote
 Prevención con vehículos de transporte y manipulación de cargas
 ****************************************************************
 
-Los aparatos de manipulación de cargas en el interior de los establecimientos industriales están compuestos por **grúas, puentes-grúa, 
+Los aparatos de manipulación de cargas en el interior de los establecimientos industriales están compuestos por **grúas, puentes-grúa,
 polipastos, montacargas, carretillas elevadoras** y las propias cargas que se manipulan.
 
 Los riesgos asociados a la manipulación de cargas son los siguientes:

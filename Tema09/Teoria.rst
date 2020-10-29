@@ -1,5 +1,8 @@
+9. REDES LOCALES VIRTUALES
+==========================
+
 Introducción
-=============
+------------
 
 .. image:: images/tema09-000.png
 

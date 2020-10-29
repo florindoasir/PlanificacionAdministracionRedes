@@ -1,5 +1,8 @@
+7. REDES INALÁMBRICAS
+=====================
+
 Conceptos generales
-===================
+-------------------
 
 Tecnologías inalámbricas
 -------------------------
@@ -142,7 +145,7 @@ WLAN: Wi-Fi
 ------------
 
 .. figure:: images/tema07-005.png
- 
+
    Logo Wi-Fi
 
 **Wi-Fi** (/ˈwaɪfaɪ/; en algunos países hispanoparlantes /ˈwifi/) es un mecanismo de conexión de dispositivos electrónicos de forma inalámbrica. Los dispositivos habilitados con Wi-Fi, tales como: un ordenador personal, una consola de videojuegos, un smartphone o un reproductor de audio digital, pueden conectarse a Internet a través de un punto de acceso de red inalámbrica. Dicho **punto de acceso** (o **hotspot**) tiene un alcance de unos 20 metros en interiores y al aire libre una distancia mayor. Pueden cubrir grandes áreas la superposición de múltiples puntos de acceso.
@@ -224,7 +227,7 @@ Norma      Velocidad     Frecuencia        Año
 802.11a    54 Mbps       5 Ghz (OFDM)      1999
 802.11b    11 Mbps       2,4 Ghz (DSSS)    1999
 802.11g    54 Mbps       2,4 Ghz (OFDM)    2003
-802.11G +  108 Mbps      2,4 Ghz 
+802.11G +  108 Mbps      2,4 Ghz
 802.11n    300 Mbps      2,4 / 5 Ghz       2009
 802.11ac   1 Gbps        5 Ghz             2014
 802.11ad   7 Gbps        2,4 / 5 / 60 Ghz  2015?
@@ -482,7 +485,7 @@ Entre las especificaciones están:
 - Diversas mejoras en el uso del espectro.
 
 .. note::
-   
+
    Para las comunicaciones inalámbricas 3G, la ITU ya había emitido unas especificaciones conocidas como IMT-2000.
 
 

@@ -1,5 +1,8 @@
+2. NORMALIZACIÓN EN LAS REDES
+=============================
+
 Estándares y organismos de normalización
-========================================
+----------------------------------------
 
 Un estándar puede definir, por ejemplo, el tipo de conector a emplear, las tensiones e intensidades empleadas, el formato de los datos a enviar, etc. En resumen, **un estándar es un conjunto de normas, acuerdos y recomendaciones técnicas que regulan la transmisión de los sistemas de comunicación**. El empleo de estos estándares presenta las siguientes ventajas:
 

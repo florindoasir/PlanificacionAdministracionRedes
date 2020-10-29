@@ -1,5 +1,8 @@
+4. SISTEMAS DE CABLEADO ESTRUCTURADO
+====================================
+
 Introducción
-============
+------------
 
 .. figure:: images/tema04-000.png
 
@@ -87,7 +90,7 @@ EPHOS 2 (European Procurement Handbook for Open Systems - Phase 2) recuerda que 
 
 
 
-.. note:: 
+.. note::
 
    ISO 11801 está orientada a distancias de hasta 3.000 m., espacios de hasta 1.000.000 m² y entre 50 y 50.000 usuarios.
 
@@ -129,7 +132,7 @@ La normativa aplicable a SCE es:
   Normas de Infraestructura Residencial de Telecomunicaciones
 
 - ANSI/TIA/EIA 598-A
-  
+
   Define los códigos de colores para la fibra óptica.
 
 - ANSI/TIA/EIA 606-A
@@ -393,7 +396,7 @@ En el pasado el conector ST se ha utilizado habitualmente en redes de datos con 
 **Conector FC**
 
 .. figure:: images/tema04-133.png
-  
+
    Conector FC
 
 
@@ -420,14 +423,14 @@ ST se considera como un conector óptico de **segunda generación**.
 
 Principales características:
 
-- Pérdidas típicas de inserción FMM < 0,3 dB, FSM < 0,2 dB 
+- Pérdidas típicas de inserción FMM < 0,3 dB, FSM < 0,2 dB
 - Pérdidas típicas de retorno FMM > 25 dB, FSM > 55 dB
 
 
 **Conector SC (suscriber connector)**
 
 .. figure:: images/tema04-136.png
-   
+
    Conector SC
 
 
@@ -526,7 +529,7 @@ Para evitar interferencias electromagnéticas la canalización de las corrientes
 
 =============================================================== ============= ============= =============
 Fuente de campo (se supone una tensión inferior a 480 voltios)  Separación mínima según la potencia (KVA)
---------------------------------------------------------------- ----------------------------------------- 
+--------------------------------------------------------------- -----------------------------------------
 -                                                                < 2           [2, 5]        > 5
 =============================================================== ============= ============= =============
 Líneas de corriente o equipos eléctricos no apantallados        13 cm         30 cm         60 cm
@@ -671,7 +674,7 @@ La roseta (TO) forma parte del área de trabajo.
 
 .. note::
 
-   No es obligatorio, pero se recomienda fuertemente que la suma de longitudes de los latiguillos sea menor o igual que 10 m: 
+   No es obligatorio, pero se recomienda fuertemente que la suma de longitudes de los latiguillos sea menor o igual que 10 m:
    (2) + (3) + (cable del área de trabajo <=3 m) <= 10 m
 
 .. [1] No son obligatorios pero si fuertemente recomendados.
@@ -754,7 +757,7 @@ En la **interconexión hacemos uso de un panel de parcheo intermedio**. Cuando s
 .. figure:: images/tema04-158.png
 
 
-En la **conexión cruzada hacemos uso de dos paneles de parcheo intermedios**. Con un sistema de parcheo de conexión cruzada centralizada, se pueden alcanzar los requisitos de bajo costo y un servicio muy confiable. En esta estructura simplificada, todos los elementos de la red tienen conexiones de cables de equipos permanentes que se terminan una vez y no se vuelven a manejar nunca más. Los técnicos aíslan elementos, conectan nuevos elementos, rastrean problemas y realizan el mantenimiento y otras funciones usando conexiones de cable de parcheo semipermanentes en el frente de un sistema de conexión cruzada. 
+En la **conexión cruzada hacemos uso de dos paneles de parcheo intermedios**. Con un sistema de parcheo de conexión cruzada centralizada, se pueden alcanzar los requisitos de bajo costo y un servicio muy confiable. En esta estructura simplificada, todos los elementos de la red tienen conexiones de cables de equipos permanentes que se terminan una vez y no se vuelven a manejar nunca más. Los técnicos aíslan elementos, conectan nuevos elementos, rastrean problemas y realizan el mantenimiento y otras funciones usando conexiones de cable de parcheo semipermanentes en el frente de un sistema de conexión cruzada.
 
 
 .. figure:: images/tema04-159.png
@@ -879,16 +882,16 @@ El código que ves se ajusta a las especificaciones descritas por la norma ameri
 
   Nuestra red se extiende por cuatro edificios que identificamos individualmente con dos dígitos (Ex). De tal manera que E1 significa Edificio 1 y E2, por ejemplo, Edificio 2. La norma 606-A se aplica en este caso dentro de la clase o categoría tres.
 
-[E2-0A]  
-  
+[E2-0A]
+
   Es uno de lo extremos del troncal que empieza en el armario A de la planta baja (0) del Edificio 2. Esta filosofía es típica de la norma americana, se referencian los recintos, armarios y envolventes no los nombres de las salas, despachos o aulas. ¿La razón? pues es bien simple, lo primero cambia más difícilmente de nombre que lo segundo.
 
-[E3-0A]  
-  
+[E3-0A]
+
   Es el otro extremo del troncal ubicado en el armario A de la planta baja del Edificio 3. La barra inclinada nos informa de que se trata de un troncal.
 
-23   
-  
+23
+
   Identifica el número del troncal establecido entre ambos edificios.
 
 La norma permite añadir más códigos, para diferenciar por ejemplo fibra de cobre aunque las etiquetas resultantes pueden llegar a ser bastante largas así que nosotros hemos optado por simplificar al máximo y basarnos en el complemento que aportan los planos de la instalación.
@@ -899,12 +902,12 @@ La norma permite añadir más códigos, para diferenciar por ejemplo fibra de co
 
 Vemos en esta otra imagen como quedan cuatro tomas de un puesto de trabajo en la distribución horizontal. Al trabajar en clase 3 se debe indicar siempre el edificio. En las tomas lo hacemos pues este modelo de Cima Box ofrece un buen espacio para poner bellas etiquetas, en el plano nos hemos tomado la licencia de no incluir el código de los edificios por ser obvio y con el fin de ganar en claridad.
 
-E2-0A-B03  
+E2-0A-B03
 
   Nos informa de que esta toma viene del Edificio 2, planta baja, rack A. Dentro del armario se ubica en el panel de patcheo B, boca 03.
 
 E2-0A-W16
-  
+
   Viene del mismo sitio pero de otro panel de patcheo diferente. En concreto se trata de telefonía así que la letra W pretende diferenciar esta cuestión directamente. Esta práctica no es obligada pero si aconsejada por la propia norma.
 
 El nivel de detalle en el proyecto y la instalación al que se puede llegar aplicando esta norma es muy alto. Abarca tomas de tierra, recintos, canalizaciones, simbología, códigos de colores, planos y mucho más. Si te dedicas a esto y te gusta cuidar los detalles merece la pena leerse todo el documento. Un buen proyecto en manos de un buen instalador es algo que no puede terminar mal.

@@ -1,5 +1,8 @@
+10. ENCAMINAMIENTO
+==================
+
 Introducción
-=============
+------------
 
 .. image:: images/tema10-000.png
 
@@ -300,7 +303,7 @@ En un entorno de interconexión total, como el de Internet, no es posible que la
 - Se agrupan múltiples entradas de la tabla en una sola, la ruta por defecto.
 
 .. note::
-  
+
    Todos los routers listados en la tabla de encaminamiento de un nodo deben de encontrarse en subredes a las que dicho nodo esté conectado directamente (estrategia salto a salto).
 
 Métricas
@@ -456,7 +459,7 @@ Estructura jerárquica de internet
 .. image:: images/tema10-033.png
 
 
-.. note:: 
+.. note::
 
   Tier es una palabra inglesa que puede traducirse por nivel.
 
@@ -479,7 +482,7 @@ Los **Tier 3** ISPs son ISPs locales de acceso
 - Para alcanzar internet solamente contratan tránsito IP (normalmente a ISPs Tier2) ¿Cómo se conectan los ISPs?
 - Point of Presence (PoP): es un interfaz entre dos ISPs. Pueden estar en las propias instalaciones de un ISP o en un IX.
 - Internet eXchange point: infraestructura en la que los ISPs intercambian tráfico entre sus redes.
-  
+
   - Reducen la cantidad de tráfico que deben enviar a los ISPs superiores → reducción de costes
   - Aprenden nuevas rutas → mayor eficiencia y tolerancia a fallos
   - Mantienen el tráfico local → mejor latencia

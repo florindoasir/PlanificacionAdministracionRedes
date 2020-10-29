@@ -1,5 +1,8 @@
+3. LA CAPA FÍSICA
+=================
+
 Concepto de capa física
-========================
+-----------------------
 
 La capa física se encarga de definir todos los aspectos relacionados con los elementos físicos de conexión de los dispositivos a la red, así como de establecer los procedimientos para transmitir la información sobre la serial física empleada. En este sentido, puede decirse que la capa física es la encargada de definir cuatro tipos de características de los elementos de interconexión:
 
@@ -24,17 +27,17 @@ Un medio de transmisión guiado es **punto a punto** si proporciona un enlace di
 
 Un medio de transmisión puede ser **simplex, half-duplex o full-duplex**. En la transmisión simplex, las señales se transmiten sólo en una única dirección; siendo una estación la emisora y otra la receptora. En half-duplex, ambas estaciones pueden transmitir, pero no simultáneamente. En fullduplex, ambas estaciones pueden igualmente transmitir y recibir, pero ahora simultáneamente. En este último caso, el medio transporta señales en ambos sentidos al mismo tiempo.
 
-.. figure:: images/tema03-000.png	
-   
+.. figure:: images/tema03-000.png
+
    Tipos de transmisión
 
 
-Toda señal electromagnética, considerada como función del tiempo, puede ser tanto analógica como digital. 
+Toda señal electromagnética, considerada como función del tiempo, puede ser tanto analógica como digital.
 
 - Una **señal analógica** es aquella en la que la intensidad de la señal varía suavemente en el tiempo. Es decir, no presenta saltos o discontinuidades.
 - Una **señal digital** es aquella en la que la intensidad se mantiene constante durante un determinado intervalo de tiempo, tras el cual la señal cambia a otro valor constante. La señal continua puede corresponder a voz y la señal discreta puede representar valores binarios (0 y 1).
 
-.. figure:: images/tema03-001.png	
+.. figure:: images/tema03-001.png
 
    Señales analógicas y digitales
 
@@ -174,7 +177,7 @@ Categorías y clases
 Según la norma **ISO/IEC 11801** los pares trenzados se pueden clasificar como:
 
 ==== ===== =========== ==================================================================
-Cat. Clase Ancho banda Aplicaciones      
+Cat. Clase Ancho banda Aplicaciones
 ==== ===== =========== ==================================================================
 1    A     0.4 MHz     Líneas telefónicas y módem.	No descrito en las recomendaciones del EIA/TIA. No es adecuado para sistemas modernos.
 2    B     4 MHz       Cable para conexión de antiguos terminales como el IBM 3270.	No descrito en las recomendaciones del EIA/TIA. No es adecuado para sistemas modernos.
@@ -206,8 +209,8 @@ Conector RJ45
    Normas de crimpado TIA 568A y 568B
 
 
-.. note:: 
-   
+.. note::
+
    RJ son las siglas de Registered Jack.
 
 Cable coaxial
@@ -234,7 +237,7 @@ Existen dos tipos de cable coaxial:
 
 - Cable coaxial de **banda base**
   Normalmente empleado en redes de computadoras, con resistencia de 50 Ω, por el que fluyen **señales digitales**. El tipo de conector es el RG58. Es el cable que **se utilizó inicialmente para las primeras redes locales, como Ethernet**, IBM PC-NET y ARCNET.
-  
+
   - Grueso (Coaxial amarillo de 50 Ω ). Su capacidad en términos de velocidad y distancia es grande, pero el coste del cableado es alto y su grosor no permite su utilización en canalizaciones con demasiados cables. Utilizado en la norma Ethernet 10Base-5.
   - Fino (Coaxial RG58 de 50 Ω ) con terminaciones BNC. Es más barato y fino y, por tanto, solventa algunas de las desventajas del cable grueso; aunque obtiene peores rendimientos que el cable amarillo. Utilizado en la norma Ethernet 10Base-2.
 
@@ -401,8 +404,8 @@ Espectro electromagnético
 
 .. image:: images/tema03-033.png
 
-========================== ========================== ========================== 
--                          Longitud de onda (m)       Frecuencia (Hz) 
+========================== ========================== ==========================
+-                          Longitud de onda (m)       Frecuencia (Hz)
 ========================== ========================== ==========================
 **Radio**                  1000 km – 1 mm             300 Hz - 300Gz
 **Luz**                    1 mm – 10 nm               300 GHz – 30 PHz
@@ -416,11 +419,11 @@ Frecuencias y medios empleados
 .. image:: images/tema03-034.png
 
 .. note::
-   
+
    Las ondas en las frecuencias del **ultravioleta, rayos x y rayos gamma** son ionizantes, es decir tienen repercusiones perjudiciales sobre los tejidos de los seres vivos, por lo que **NO se utilizan para la transmisión**.
 
 
-.. csv-table:: 
+.. csv-table::
    :header: Rango de frecuencia, Longitud de onda, Banda (frecuencia), Tipo de propagación, Aplicaciones
 
    300 Hz – 3 KHz,	1000-100 km,ELF (extrem. baja),	Superficie,	"Comunicaciones submarinas"
@@ -432,21 +435,21 @@ Frecuencias y medios empleados
    300 MHz – 3 GHz,	1000-100 mm,UHF (ultra alta),	Visión directa,	"TV UHF, teléfonos móviles"
    3 GHz – 30 GHz,	100-10 mm,	SHF (super alta),	Visión directa y espacio,	"Microondas terrestres, satélites"
    30 GHz – 300 GHz,10-1 mm,	EHF (extrema. alta),	Espacio, "Satélites, radar y comunicaciones experimentales"
-   300 GHz – 6 THz,	"1 mm – 50 µm",	Infrarrojo Lejano,,	
-   6 THz – 120 THz,	"50 µm – 2,5 µm",	Infrarrojo Medio,,	
-   120 THz - 384 THz,"2,5 µm – 780 nm",	Infrarrojo Cercano,,	
-   384 THz – 789 THz,"780 nm – 380 nm",	Luz Visible,,	
+   300 GHz – 6 THz,	"1 mm – 50 µm",	Infrarrojo Lejano,,
+   6 THz – 120 THz,	"50 µm – 2,5 µm",	Infrarrojo Medio,,
+   120 THz - 384 THz,"2,5 µm – 780 nm",	Infrarrojo Cercano,,
+   384 THz – 789 THz,"780 nm – 380 nm",	Luz Visible,,
    789 THz – 1.5 PHz,"380 nm – 200 nm",	Ultravioleta Cercano,,
-   1.5 PHz – 30 PHz, "200 nm -10 nm",	Ultravioleta Extremo,,	
+   1.5 PHz – 30 PHz, "200 nm -10 nm",	Ultravioleta Extremo,,
 
 
 
 Microondas
 -----------
 
-Se denomina microondas a las ondas electromagnéticas definidas en un rango de frecuencias determinado generalmente de **entre 300 MHz y 300 GHz**, que supone una longitud de onda en el **rango de 1 m a 1 mm**. 
+Se denomina microondas a las ondas electromagnéticas definidas en un rango de frecuencias determinado generalmente de **entre 300 MHz y 300 GHz**, que supone una longitud de onda en el **rango de 1 m a 1 mm**.
 
-.. important:: 
+.. important::
 
    Otras definiciones, por ejemplo las de los estándares IEC 60050 y IEEE 100 sitúan su rango de frecuencias entre 1 GHz y 300 GHz, es decir, longitudes de onda de entre 30 centímetros a 1 milímetro.
 
@@ -470,7 +473,7 @@ Conviene destacar que el Reglamento de Radiocomunicaciones de UIT ha destinado a
 	- **2.400-2.500 MHz (frecuencia central 2.450 MHz)**,
 	- 5.725-5.875 MHz (frecuencia central 5.800 MHz) y
 	- 24-24,25 GHz (frecuencia central 24,125 GHz),
-	
+
 	están designadas para aplicaciones industriales, científicas y médicas (ICM). Los servicios de radiocomunicación que funcionan en estas bandas deben aceptar la interferencia perjudicial resultante de estas aplicaciones. “
 
 

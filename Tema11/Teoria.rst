@@ -1,5 +1,8 @@
+11. LA CAPA DE TRANSPORTE
+=========================
+
 Conceptos generales
-===================
+-------------------
 
 La capa de red transfiere datagramas entre dos ordenadores a través de la red utilizando como identificadores las direcciones IP. La capa de transporte añade la noción de puerto para distinguir entre los muchos destinos dentro de un mismo host. No es suficiente con indicar la dirección IP del destino, además hay que especificar la aplicación que recogerá el mensaje. Cada aplicación que esté esperando un mensaje utiliza un número de puerto distinto; más concretamente, la aplicación está a la espera de un mensaje en un puerto determinado (escuchando un puerto).
 
@@ -232,7 +235,7 @@ Host 1              Host 2
 Para que se pueda crear una conexión, el extremo del servidor debe hacer una apertura pasiva del puerto (escuchar su puerto y quedar a la espera de conexiones) y el cliente, una apertura activa en el puerto del servidor (conectarse con el puerto de un determinado servidor).
 
 .. note::
-   
+
    El comando **NetStat** muestra las conexiones abiertas en un ordenador, así como estadísticas de los distintos protocolos de Internet.
 
 Establecimiento de una conexión
@@ -532,7 +535,7 @@ A continuación se muestra un ejemplo de script Linux para cortafuegos con regla
 	# Description:       Cortafuegos contiene las reglas de iptables que se aplicarán
 	#                    después de la configuración del soporte de red o networking
 	#                    y del balanceo de carga (si está habilitado).
-	#                    Proporciona redirección de puertos en el canal PREROUTING 
+	#                    Proporciona redirección de puertos en el canal PREROUTING
 	#                    para dar soporte a un proxy transparente.
 	### END INIT INFO
 
@@ -541,7 +544,7 @@ A continuación se muestra un ejemplo de script Linux para cortafuegos con regla
 	PATH=/sbin:/usr/sbin:/bin:/usr/bin
 	NAME=cortafuegos
 	PIDFILE=/var/run/$NAME.pid
-	
+
 	# Variables de red
 	IF_ADSL1="p1p1"            # Interface conectada a ADSL1
 	IF_ADSL2="p4p1"            # Interface conectada a ADSL2
@@ -554,11 +557,11 @@ A continuación se muestra un ejemplo de script Linux para cortafuegos con regla
 	NET_LOCAL="10.0.0.0/8"     # Red para IF_LOCAL
 	GW_ADSL1="192.168.1.1"     # Gateway para ADSL1
 	GW_ADSL2="192.168.2.1"     # Gateway para ADSL2
-	
+
 
 	###### START
 	do_start () {
-	  # Reglas de iptables 
+	  # Reglas de iptables
 	  echo "Limpiando Reglas Anteriores..."
 	  iptables -F
 	  iptables -X
@@ -583,7 +586,7 @@ A continuación se muestra un ejemplo de script Linux para cortafuegos con regla
 
 	  #echo "Reglas Aplicadas"
 	}
-	
+
 
 	###### STATUS
 	do_status () {
@@ -592,8 +595,8 @@ A continuación se muestra un ejemplo de script Linux para cortafuegos con regla
 	  iptables -t nat -L -n -v
 	  iptables -t mangle -L -n -v
 	}
-	
-	
+
+
 	###### STOP
 	do_stop () {
 	  echo "Limpiando Reglas anteriores..."

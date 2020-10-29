@@ -1,5 +1,8 @@
+6. LA CAPA DE ENLACE
+====================
+
 Conceptos generales
-===================
+-------------------
 
 La capa de enlace de datos se sitúa en el **nivel 2** del modelo OSI. La misión de la capa de enlace es establecer una línea de comunicación libre de errores que pueda ser utilizada por la capa inmediatamente superior: la capa de red.
 
@@ -41,9 +44,9 @@ LAPB         Link Access Procedure – Balanced         X.25
 LAPD         Link Access Procedure – D-channel        RDSI
 LAPF         Link Access Procedure for Frame-mode     Frame Relay
 LLC          Logical Link Control                     IEEE 802
-SLIP         Serial Line Internet Protocol	
-PPP          Point-to-Point Protocol	
-ATM          Asynchronous Transfer Mode	
+SLIP         Serial Line Internet Protocol
+PPP          Point-to-Point Protocol
+ATM          Asynchronous Transfer Mode
 ============ ======================================== ============
 
 La capa de enlace se encarga de los siguientes aspectos:
@@ -63,7 +66,7 @@ Trama de 802.3 Ethernet
 .. figure:: images/tema06-003.png
 
 .. note::
-  
+
    Al final de la trama hay un intervalo llamado IFG de 12 bytes que no se utiliza, se explica más adelante.
 
 
@@ -86,7 +89,7 @@ Trama de 802.3 Ethernet
   - Como Tx ≥ 2Tp: Datos+Relleno ≥ 46 bytes.
 
 - **FCS** (Frame Check Sequence) -> CRC (CRC, Cyclic Redundancy Check):
-  
+
   Secuencia de chequeo de trama. Es un CRC de un polinomio generador de orden 33:
 
   x32+x26+x23+x22+x16+x12+x11+x10+x8+x7+x5+x4+x2+x+1
@@ -101,7 +104,7 @@ CRC
 
 La **comprobación de redundancia cíclica** (CRC) es un código de detección de errores usado frecuentemente en redes digitales y en dispositivos de almacenamiento para detectar cambios accidentales en los datos. Los bloques de datos ingresados en estos sistemas contiene un valor de verificación adjunto, basado en el residuo de una división de polinomios; el cálculo es repetido en el destino, y la acción de corrección puede tomarse en caso de que el valor de verificación no concuerde; por lo tanto se puede afirmar que este código es un tipo de función que recibe un flujo de datos de cualquier longitud como entrada y devuelve un valor de longitud fija como salida. El término suele ser usado para designar tanto a la función como a su resultado. Pueden ser usadas como suma de verificación para detectar la alteración de datos durante su transmisión o almacenamiento. Las CRC son populares porque su implementación en hardware binario es simple, son fáciles de analizar matemáticamente y son particularmente efectivas para detectar errores ocasionados por ruido en los canales de transmisión.
 
-Ejemplo: 
+Ejemplo:
 
 - Información a transmitir: 10110101101
 - Polinomio generador: 10011
@@ -241,9 +244,9 @@ Control de flujo mediante parada y espera
 
 .. note::
 
-   La numeración de tramas es 0 y 1. 
+   La numeración de tramas es 0 y 1.
 
-Después se reinicia la numeración, lo que no significa que se vuelvan a enviar las tramas, sino que la numeración vuelve a iniciarse. 
+Después se reinicia la numeración, lo que no significa que se vuelvan a enviar las tramas, sino que la numeración vuelve a iniciarse.
 
 El procedimiento más sencillo para controlar el flujo, denominado control de flujo mediante parada y espera, funciona de la siguiente manera. Una entidad origen transmite una trama. Tras la recepción, la entidad destino indica su deseo de aceptar otra trama mediante el envío de una confirmación de la trama que acaba de recibir. **El origen debe esperar a recibir la confirmación antes de proceder a la transmisión de la trama siguiente**. De este modo, el destino puede parar el flujo de los datos sin más que retener las confirmaciones. Este procedimiento funciona adecuadamente y, de hecho, es difícil mejorar sus prestaciones cuando el mensaje se envía usando un número reducido de tramas de gran tamaño.
 
