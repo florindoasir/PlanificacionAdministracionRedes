@@ -326,6 +326,8 @@ Ejemplo navegar por internet TCP/IP
 +++++++++++++++++++++++++++++++++++
 .. image:: images/web-tcpip.PNG
 
+`Packet tracer modelos OSI/TCP-IP <http://itroque.edu.mx/cisco/cisco1/course/module3/3.2.4.6/3.2.4.6.html>`_
+
 Componentes de una red
 =======================
 
