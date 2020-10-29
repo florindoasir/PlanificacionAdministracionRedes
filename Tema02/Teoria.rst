@@ -248,7 +248,7 @@ En el año 1973, el DoD (Departamento de Defensa de Estados Unidos) inició un p
 
 Todos estos objetivos implicaron el diseño de una red con topologia irregular donde la información se fragmentaba para seguir rutas diferentes hacia el destinatario. Si alguna de esas rutas fallaba repentinamente, la información podía seguir rutas alternativas. Asi, surgieron dos redes distintas una dedicada a la investigación. ARPANET. y otra de uso exclusivamente militar, MILNET.
 
-.. image:: images/tema02-033.png
+.. image:: images/tema02-033.PNG
 
 .. note::
 
