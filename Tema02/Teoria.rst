@@ -236,8 +236,6 @@ Otro eejmplo que demuestra que el modelo OSI no es perfecto es que hay muchas fu
 Arquitectura TCP/IP
 --------------------
 
-2.3.2. Arquitectura TCP/IP
-
 TCP/IP se suele confundir muchas veces con un protocolo de comunicaciones concreto, cuando, en realidad, es una compleja arquitectura de red que incluye varios de ellos, apilados por capas. Es, sin lugar a dudas, la más utilizada del mundo, ya que es la base de comunicación de Internet y también se utiliza ampliamente en distintas versiones del sistema operativo Unix Linux.
 
 En el año 1973, el DoD (Departamento de Defensa de Estados Unidos) inició un programa de investigación para el desarrollo de tecnologias de comunicación de redes de transmisión de datos. El objetivo fundamental era desarrollar una red de comunicación que cumpliera las siguientes características:
