@@ -182,7 +182,7 @@ El modelo OSI, sin embargo, continúa siendo de gran importancia, ya que nos per
 - Las divisiones en las capas deben establecerse de forma que se minimice el flujo de información entre ellas, es decir, que la interfaz sea más sencilla.
 - Permitir que las modificaciones de funciones o protocolos que se realicen en una capa no afecten a los niveles contiguos.
 - Utilizar la experiencia de protocolos anteriores. Las fronteras entre niveles deben situarse donde la experiencia ha demostrado que son convenientes.
-- Cada nivel debe interaccionar únicamente con los niveles contiguos a él (es decir, el superior y el inferior), La función de cada capa se debe elegir pensando en la definición de protocolos estandarizados internacionalmente. 
+- Cada nivel debe interaccionar únicamente con los niveles contiguos a él (es decir, el superior y el inferior), La función de cada capa se debe elegir pensando en la definición de protocolos estandarizados internacionalmente.
 
 OSI está definido más bien como modelo, y no como arquitectura, La razón principal es que la IS0 definió solamente la función general que debe realizar cada capa, pero no mencionó en absoluto los servicios y protocolos que se deben usar en cada una de ellas. Esto quiere decir que, al contrario que el resto de arquitecturas de redes, el modelo OSI se definió antes de que se diseñaran los protocolos. Recuérdese la definición de arquitectura que aparece en el apartado anterior
 
@@ -230,8 +230,57 @@ Aplicación
 
 Esta capa proporciona un medio a los programas de aplicación para que accedan al entorno OSI. Se considera que residen en esta capa las aplicaciones de uso general como transferencia de ficheros, correo electrónico y acceso terminal a computadores remotos. **Proporciona un servicio al usuario final**.
 
+El modelo Osi no es un modelo perfecto. Incluso para algunos es un mal diseño. Lo más importante y por lo que cobra importancia es en cuanto se refiere a las capas. Por otro lado, todas las capas no tienen la misma carga de trabajo. Hay capas que están más libres (sesión y presentación) y otras capas inferiores están más saturadas.
+Otro eejmplo que demuestra que el modelo OSI no es perfecto es que hay muchas funciones que se repiten en todas las capas, lo que hace que muchso servicios y programas estén duplicados.
+
 Arquitectura TCP/IP
 --------------------
+
+2.3.2. Arquitectura TCP/IP
+
+TCP/IP se suele confundir muchas veces con un protocolo de comunicaciones concreto, cuando, en realidad, es una compleja arquitectura de red que incluye varios de ellos, apilados por capas. Es, sin lugar a dudas, la más utilizada del mundo, ya que es la base de comunicación de Internet y también se utiliza ampliamente en distintas versiones del sistema operativo Unix Linux.
+
+En el año 1973, el DoD (Departamento de Defensa de Estados Unidos) inició un programa de investigación para el desarrollo de tecnologias de comunicación de redes de transmisión de datos. El objetivo fundamental era desarrollar una red de comunicación que cumpliera las siguientes características:
+
+- Permita interconectar redes diferentes. Esto quiere decir que la red en general puede estar formada por tramos que usan tecnología de transmisión diferente.
+
+- Sea tolerante a fallos. El DoD deseaba una red que fuera capaz de soportar ataques terroristas o incluso alguna guerra nuclear sin perderse datos y manteniendo las comunicaciones establecidas.
+
+- Permita el uso de aplicaciones diferentes: transferencia de archivos, comunicación en tiempo real, etc.
+
+Todos estos objetivos implicaron el diseño de una red con topologia irregular donde la información se fragmentaba para seguir rutas diferentes hacia el destinatario. Si alguna de esas rutas fallaba repentinamente, la información podía seguir rutas alternativas. Asi, surgieron dos redes distintas una dedicada a la investigación. ARPANET. y otra de uso exclusivamente militar, MILNET.
+
+.. image:: images/tema02-000.png
+
+.. note::
+
+   En realidad la arquitectura TCP/IP es una arquitectura de 4 capas:
+
+   - 4. Aplicación (capas 5,6 y 7 de OSI)
+   - 3. Transporte (capa 4 de OSI)
+   - 2. Internet (capa 3 de OSI)
+   - 1. Acceso a la red (capas 1 y 2 de OSI)
+
+   En estos apuntes usaremos la distribución de capas indicadas en la figura anterior por motivos didácticos al ser la numeración de niveles muy parecida al modelo OSI.
+
+Sabiendo que TCP/IP sólo tiene cuatro capas pasamos a definirlas
+
+Capa de subred
+++++++++++++++
+El modelo no da mucha información de esta capa y solamente se especifica que debe existir algun protocolo que conecta la estación con la red. La razón fundamental es que, como TCP/IP se disehó para su funcionamiento sobre redes diferentes, esta capa depende de la tecnologia utilizada y no se especifica de antemano
+
+Capa de interred
+++++++++++++++++
+Esta capa es la más importante de la arquitectura y su misión consiste en permitir que las estaciones envien información (paquetes) a la red y los hagan viajar de forma independiente hacia su destino. Durante ese viaje, los paquetes pueden atravesar redes diferentes y llegar desordenados. Esta capa no se responsabiliza de la tarea de ordenar de nuevo los mensajes en el destino. El protocolo más importante de esta capa se llama IP (Internet Protocol o Protocolo de Interred). aunque también existen otros protocolos.
+
+Capa de transporte
+++++++++++++++++++
+Esta cumple la función de establecer una conversación entre el origen y el destino, de igual forma que hace la capa de transporte en el modelo OSI. Puesto que las capas inferiores no se responsabilizan del control de errores ni de la ordenación de los mensajes, ésta debe realizar todo ese trabajo. Aquí también se han definido varios protocolos, entre los que destacan *TCP* (Transmission Control Protocol o Protocolo de Control de la Transmisión), orientado a la conexión y fiable, y *UDP* (User Datagram Protocol o Protocolo de Datagrama de Usuario). no orientado a la conexión y no fiable.
+
+Capa de aplicación
+++++++++++++++++++
+Esta capa contiene, al igual que la capa de aplicación de OSI, todos los protocolos de alto nivel que utilizan los programas para comunicarse. Aqui se encuentra el protocolo de terminal virtual (TELNET), el de transferencia de archivos (FTP), el protocolo HTTP que usan los navegadores para recuperar páginas en la World Wide Web, etc.
+
 
 .. image:: images/tema02-001.png
 
