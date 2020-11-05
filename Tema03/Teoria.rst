@@ -170,6 +170,14 @@ Tipos de cables
 
    Pares trenzados apantallados con blindado global
 
+Ancho de banda
+++++++++++++++++++++
+
+El ancho de banda se mide como la cantidad de datos que se pueden transferir entre dos puntos de una red en un tiempo específico. Normalmente, el ancho de banda se mide en bits por segundo (bps) y se expresa como una tasa de bits.
+
+El ancho de banda denota la capacidad de transmisión de una conexión y es un factor importante al determinar la calidad y la velocidad de una red.
+
+El ancho de banda se puede medir la frecuencia de la red (Mhz) y la velocidad (bps)
 
 Categorías y clases
 ++++++++++++++++++++
