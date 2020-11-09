@@ -538,21 +538,21 @@ Datos digitales, señales digitales
 
    Datos digitales -> Señales digitales
 
-- *NRZ-L: Non Return-to-Zero (Level)*: No retorno a cero. Al principio de cada tiempo de bit, la señal toma pa posición alta si el valor recibido es 1 y la posición baja si el valor recibido es 0.
+- **NRZ-L: Non Return-to-Zero (Level)**: No retorno a cero. Al principio de cada tiempo de bit, la señal toma pa posición alta si el valor recibido es 1 y la posición baja si el valor recibido es 0.
 
-- *NRZ-M ó NRZI: Non Return-to-Zero (Mark) or Non Return-to-Zero Inverted*: Al principio de cada tiempo de bit, La señala cambia si el valor es 1, si el valor es 0 se mantiene constante
+- **NRZ-M ó NRZI: Non Return-to-Zero (Mark) or Non Return-to-Zero Inverted**: Al principio de cada tiempo de bit, La señala cambia si el valor es 1, si el valor es 0 se mantiene constante
 
-- *NRZ-S: Non Return-to-Zero (Space):* Al principio de cada tiempo de bit, La señala cambia si el valor es 0, si el valor es 1 se mantiene constante.
+- **NRZ-S: Non Return-to-Zero (Space):** Al principio de cada tiempo de bit, La señala cambia si el valor es 0, si el valor es 1 se mantiene constante.
 
-- *Biphase-L ó Manchester: Biphase (Level) or "Manchester":* La señal cambia en medio de cada tiempo de bits. Si el valor es un 1, la señal cambia de arriba-abajo. Si el valor es un 0, la señal cambia de abajo-arriba.
+- **Biphase-L ó Manchester: Biphase (Level) or "Manchester":** La señal cambia en medio de cada tiempo de bits. Si el valor es un 1, la señal cambia de arriba-abajo. Si el valor es un 0, la señal cambia de abajo-arriba.
 
-- *Biphase-M: Biphase (Mark):* La señal siempre cambia al principio de cada tiempo de bits. La señal vuelve a cambier en medio del tiempo de bits si el valor es un 1
+- **Biphase-M: Biphase (Mark):** La señal siempre cambia al principio de cada tiempo de bits. La señal vuelve a cambier en medio del tiempo de bits si el valor es un 1
 
-- *Biphase-S: Biphase (Space):* La señal siempre cambia al principio de cada tiempo de bits. La señal vuelve a cambier en medio del tiempo de bits si el valor es un 0
+- **Biphase-S: Biphase (Space):** La señal siempre cambia al principio de cada tiempo de bits. La señal vuelve a cambier en medio del tiempo de bits si el valor es un 0
 
-- *RZ: Return-to-Zero:* La señal permanece baja por defecto. La señal toma el valor alto al principo de cada tiempo de bit si el valor es 1. En la mitad del tiempo de bits la señal vuelve a su valor por defecto (valor bajo)
+- **RZ: Return-to-Zero:** La señal permanece baja por defecto. La señal toma el valor alto al principo de cada tiempo de bit si el valor es 1. En la mitad del tiempo de bits la señal vuelve a su valor por defecto (valor bajo)
 
-- *Bipolar-RZ: Bipolar Return-to-Zero:* La señal permanece baja por defecto. La señal toma el valor alto al principo de cada tiempo de bit si el valor es 1. En la mitad del tiempo de bits la señal vuelve a su valor por defecto (valor bajo). El siguiente valor 1 la señal tomará un valor negativo y asi se irá alternando.
+- **Bipolar-RZ: Bipolar Return-to-Zero:** La señal permanece baja por defecto. La señal toma el valor alto al principo de cada tiempo de bit si el valor es 1. En la mitad del tiempo de bits la señal vuelve a su valor por defecto (valor bajo). El siguiente valor 1 la señal tomará un valor negativo y asi se irá alternando.
 
 Datos digitales, señales analógicas
 -----------------------------------
