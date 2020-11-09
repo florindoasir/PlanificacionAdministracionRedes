@@ -538,21 +538,21 @@ Datos digitales, señales digitales
 
    Datos digitales -> Señales digitales
 
-La forma más frecuente y fácil de transmitir señales digitales es mediante la utilización de un nivel diferente de tensión para cada uno de los dos dígitos binarios. Los códigos que siguen esta estrategia comparten la propiedad de que el nivel de tensión se mantiene constante durante la duración del bit; es decir, no hay transiciones (no hay retorno al nivel cero de tensión). Por ejemplo, la ausencia de tensión se puede usar para representar un 0 binario, mientras que un nivel constante y positivo de tensión puede representar al 1. Este código se denomina no retorno a cero (NRZ, Non-return to Zero). Sin embargo, es más habitual usar un nivel negativo para representar un valor binario y una tensión positiva para representar al otro. Este último código se denomina **código no retorno a nivel cero** (NRZ-L, Nonreturn to Zero-Level). **NRZ-L** se usa generalmente para generar o interpretar los datos binarios en terminales y otros dispositivos.
+- *NRZ-L: Non Return-to-Zero (Level)*: No retorno a cero. Al principio de cada tiempo de bit, la señal toma pa posición alta si el valor recibido es 1 y la posición baja si el valor recibido es 0.
 
-Una variante del NRZ se denomina **NRZI (Noreturn to Zero, invert on ones)**. Al igual que NRZ-L, NRZI mantiene constante el nivel de tensión durante la duración de un bit. Los datos se codifican mediante la presencia o ausencia de una transición de la señal al principio del intervalo de duración del bit. Un 1 se codifica mediante la transición (bajo a alto o alto a bajo) al principio del intervalo de señalización, mientras que un cero se representa por la ausencia de transición.
+- *NRZ-M ó NRZI: Non Return-to-Zero (Mark) or Non Return-to-Zero Inverted*: Al principio de cada tiempo de bit, La señala cambia si el valor es 1, si el valor es 0 se mantiene constante
 
-Sus limitaciones (tanto NRZ-L como NRZI) hacen que estos códigos no sean atractivos para aplicaciones de transmisión de señales.
+- *NRZ-S: Non Return-to-Zero (Space):* Al principio de cada tiempo de bit, La señala cambia si el valor es 0, si el valor es 1 se mantiene constante.
 
-En el caso del esquema **bipolar-AMI**, un 0 binario se representa por ausencia de señal y 1 binario se representa como un pulso positivo o negativo. Los pulsos correspondientes a los deben tener una polaridad alternante. Este tipo de esquema tiene las siguientes ventajas. En primer lugar, no habrá problemas de sincronización en el caso de que haya una cadena larga de unos. Cada 1 fuerza una transición, por lo que el receptor se puede sincronizar en dicha transición. Una cadena larga de ceros sigue siendo un problema.
+- *Biphase-L ó Manchester: Biphase (Level) or "Manchester":* La señal cambia en medio de cada tiempo de bits. Si el valor es un 1, la señal cambia de arriba-abajo. Si el valor es un 0, la señal cambia de abajo-arriba.
 
-Los comentarios del párrafo anterior son también trasladables al código **pseudoternario**. En este caso, el bit 1 se representa por la ausencia de señal y el 0 mediante pulsos de polaridad alternante. No hay ninguna ventaja particular de esta codificación respecto de la anterior, siendo base de muchas aplicaciones.
+- *Biphase-M: Biphase (Mark):* La señal siempre cambia al principio de cada tiempo de bits. La señal vuelve a cambier en medio del tiempo de bits si el valor es un 1
 
-La **codificación Manchester** es un método de codificación eléctrica de una señal binaria en el que en cada tiempo de bit hay una transición entre dos niveles de señal. Siempre hay una transición en mitad del intervalo de duración del bit. Esta transición en la mitad del bit sirve como procedimiento de sincronización, a la vez que sirve para transmitir los datos: una transición de bajo a alto representa un 1 y una transición de alto a bajo representa un 0.
+- *Biphase-S: Biphase (Space):* La señal siempre cambia al principio de cada tiempo de bits. La señal vuelve a cambier en medio del tiempo de bits si el valor es un 0
 
-En **Manchester diferencial**, la transición a mitad del intervalo se utiliza tan sólo para proporcionar sincronización. La codificación de un 0 se representa por la presencia de una transición al principio del intervalo del bit, y un 1 se representa mediante la ausencia de una transición al principio del intervalo. El código Manchester diferencial tiene como ventajas adicionales las derivadas de la utilización de una aproximación diferencial.
+- *RZ: Return-to-Zero:* La señal permanece baja por defecto. La señal toma el valor alto al principo de cada tiempo de bit si el valor es 1. En la mitad del tiempo de bits la señal vuelve a su valor por defecto (valor bajo)
 
-Estos dos códigos se usan con frecuencia en los esquemas de transmisión de datos. Uno de los más conocidos es el código Manchester, elegido como parte de la especificación de la norma **IEEE 802.3 (Ethernet)** para la transmisión en redes LAN de cable coaxial en banda base o par trenzado con bus CSMA/CD. El Manchester diferencial se ha elegido en la norma **IEEE 802.5** para redes **LAN en anillo con paso de testigo**, en las que se usan pares trenzados apantallados.
+- *Bipolar-RZ: Bipolar Return-to-Zero:* La señal permanece baja por defecto. La señal toma el valor alto al principo de cada tiempo de bit si el valor es 1. En la mitad del tiempo de bits la señal vuelve a su valor por defecto (valor bajo). El siguiente valor 1 la señal tomará un valor negativo y asi se irá alternando.
 
 Datos digitales, señales analógicas
 -----------------------------------
