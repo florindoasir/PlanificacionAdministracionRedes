@@ -544,7 +544,7 @@ Datos digitales, señales digitales
 
 - **NRZ-S: Non Return-to-Zero (Space):** Al principio de cada tiempo de bit, La señala cambia si el valor es 0, si el valor es 1 se mantiene constante.
 
-- **Biphase-L ó Manchester: Biphase (Level) or "Manchester":** La señal cambia en medio de cada tiempo de bits. Si el valor es un 1, la señal cambia de arriba-abajo. Si el valor es un 0, la señal cambia de abajo-arriba.
+- **Biphase-L ó Manchester: Biphase (Level) or "Manchester":** La señal cambia en medio de cada tiempo de bits. Si el valor es un 0, la señal cambia de arriba-abajo. Si el valor es un 1, la señal cambia de abajo-arriba.
 
 - **Biphase-M: Biphase (Mark):** La señal siempre cambia al principio de cada tiempo de bits. La señal vuelve a cambier en medio del tiempo de bits si el valor es un 1
 
