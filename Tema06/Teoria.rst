@@ -116,6 +116,9 @@ Ejemplo:
 - Trama transmitida: ``10110101101 0110``
 - Resto (CRC-4): ``0110``
 
+.. figure:: images/crc1.PNG
+.. figure:: images/crc2.PNG
+
 Segmentación y bloque
 ---------------------
 
