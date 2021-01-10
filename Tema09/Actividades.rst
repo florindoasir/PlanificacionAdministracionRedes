@@ -35,23 +35,27 @@ Actividades de Packet Tracer
 
 
 **Habilitando módulo HWIC-4ESW (4 port switch)**
-
-**Asignar una IP a la VLAN**
-
-.. code-block:: none
-
-	Router# configure terminal
-	Router(config)# interface vlan 10
-	Router(config-if)# ip address 192.168.5.1 255.255.255.0
-	Router(config-if)# exit
-
 **Asignar interfaces dentro de esa VLAN**
 
 .. code-block:: none
 
-	Router(config)# interface range FastEthernet0/1/x-y
-	Router(config-if-range)# switchport access vlan 10
-	Router(config-if-range)# exit
+	Switch>ENA
+	Switch#configure terminal
+
+	Switch(config)#vlan 10
+	Switch(config-vlan)#NAME VLAN10
+	Switch(config-vlan)#EXIT
+
+	Switch(config)#show vlan
+
+	Switch#configure terminal
+	Switch(config)#interface range f0/1-9
+	Switch(config-if-range)#switchport mode access 
+	Switch(config-if-range)#switchport access vlan 10
+
+	Switch(config)#show vlan
+
+
 
 2. Utilizando la misma red IP privada anterior, con las mismas VLANs, realizar el siguiente esquema. Las conexiones de los switches al router son enlaces troncales. Comprobar que existe comunicación entre los equipos de la misma VLAN.
 
