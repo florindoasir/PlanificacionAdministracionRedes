@@ -326,7 +326,21 @@ Ethernet (IEEE 802.3)
 
 IEEE 802.3 fue el primer intento para estandarizar ethernet. Aunque hubo un campo de la cabecera que se definió de forma diferente, posteriormente ha habido ampliaciones sucesivas al estándar que cubrieron las ampliaciones de velocidad (Fast Ethernet, Gigabit Ethernet y los de 10, 40 y 100 Gigabits Ethernet), redes virtuales, hubs, conmutadores y distintos tipos de medios, tanto de fibra óptica como de cables de cobre (tanto par trenzado como coaxial).
 
-Los estándares de este grupo no reflejan necesariamente lo que se usa en la práctica, aunque a diferencia de otros grupos este suele estar cerca de la realidad.
+Este estandar permite intercambiar datos entre terminales conectado en una red local (PC, impresoras, etc.).
+
+**Ventajas**
+
+- La seguridad depende de los dispositivos conectados en la red. Para hacer un ataque hay que estar dentro de la red.
+- Permite velocidades de transmisiones más rapicas que cualquier otro estándar.
+- Debido a que todas las conexiones son individuales se producen menos dominios de colision.
+
+**Desventajas**
+
+- Menor conectividade ya que los estandares 802.11 y 802.16 (redes inalambricas). Tinene un mayor rango de conexión.
+- Se necesita una gran infraestructura para conectar los equipos en red. Frente a otras infraestructuras que solo necesitarian un router WIFI.
+- Instalacion compleja de una red local.
+
+Con el tiempo ha sufrido un gran cambio en cuanto a las velocidades. Los mayores responsables de este cambio han sido las diferentes tecnologías de cables utilizado. A continaución se muestra ese cambio de velocidad y los cables que se han usado para alcanzar estas velocidades.
 
 .. figure:: images/tema06-098.png
 
