@@ -27,6 +27,15 @@ En la práctica la subcapa de acceso al medio suele formar parte de la propia ta
 
 Además de la **formación de tramas**, el nivel de enlace se ocupará del **tratamiento de los errores** que se produzcan en la recepción de las tramas, de eliminar tramas erróneas, solicitar retransmisiones, descartar tramas duplicadas, **adecuar el flujo de datos** entre emisores rápidos y receptores lentos, etc
 
+**Funciones de la capa de red:**
+*Obligatorias:*
+- Construir y destruir la trama
+- Detención de errores
+- En redes de medio compartido (LANs): controlar el acceso al medio.
+*Opcionales:*
+- Corregir errores
+- Reenviar paquetes erróneos o perdidos.
+- Ejercer control de flujo
 
 Algunos protocolos y estándares que regulan aspectos de la capa de enlace
 
