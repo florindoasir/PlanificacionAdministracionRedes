@@ -36,6 +36,15 @@ Atendiendo al número de equipos a los que va destinado un datagrama, la comunic
 
 **Geocast** se refiere a la entrega de información a un grupo de destinos en una red identificada por su ubicación geográfica. Es una forma especializada de direccionamiento de multidifusión utilizado por algunos protocolos de enrutamiento para redes móviles ad hoc.
 
+Función de los routers en los encaminamientos
+=============================================
+
+- Al principio internete estaba pensado para que cada Pc conectado a internet tenga una Ip, debido a la alta demanda de direcciones IP
+  - Se crearon iniciativas como NAT y direcciones IP privadas y publica para no abarcar tantas IP.
+  - Varios Pc conectados a una misma IP pueden tener ips privadas y salir a internet con una sola IP (NAT)
+  - Routers normales ya vienen configurados para usar NAT. 1 IP publica hacia el exterior y muchas IPs privadas en la LAN
+- Si tienes dos servidores con direccione ip fijas (inside) y le quieres dar salida al exterior necesitas dos ip fijas públicas. Nat cambia la ip fija por púbilca para salir al exterior.
+
 Clasificación
 ==============
 
@@ -68,6 +77,12 @@ Adaptativos o Dinámicos
 ++++++++++++++++++++++++
 
 En este tipo de procedimientos de encaminamiento **la información se recoge y envía de forma periódica con el fin de detectar cambios en la red**.
+
+**Objetivos:**
+- Descubrir redes remotas
+- Mantener la información de enrutamiento actualizada
+- Seleccionar la mejor ruta a las redes destinos, ya que las conocen todas
+- Brindar la funcionalidad necesaria para encontrar una nueva ruta, si la actual deja de estar disponible
 
 **Centralizado**
   En este tipo de encaminamiento, todos los nodos son iguales salvo el nodo central, que recoge la información de control de todos los nodos y calcula la FIB (tabla de encaminamiento) para cada nodo, es decir, el nodo central decide la tabla de encaminamiento de cada nodo en función de la información de control que éstos le mandan. El inconveniente de este método es que consumimos recursos de la red, y se harían necesaria rutas alternativas para comunicarse con el nodo central. La adaptación a cambios es perfecta siempre y cuando las notificaciones de los cambios lleguen antes de iniciar los cálculos de las rutas.
